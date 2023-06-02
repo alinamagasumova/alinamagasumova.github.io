@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+input {
+    all: unset;
+}
+.container {
+    padding: 0 6rem 4rem;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(51, 51, 51);
+}
+header {
+    padding: 2.5rem 6rem 2.5rem;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: calc(100% - 12rem);
+    transition: 0.5s;
+}
+.header__logo {
+    font: italic 38px 'Sofia Sans', sans-serif;
+    color: rgb(24, 189, 79);
+}
+.header__logo-dot {
+    color: rgb(32, 14, 50);
+}
+header>nav {
+    width: 50%;
+}
+.header__nav-a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+.header__nav-a:hover {
+    text-decoration: underline;
+}
+.box__menu-p {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 2rem;
+    margin-top: calc(5rem + 109px);
+}
+.box__menu-sort-buttons {
+    width: 400px;
+    margin-bottom: 2rem;
+}
+.catalog {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 55px calc((100% - 1120px)/3);
+    box-sizing: border-box;
+    margin-bottom: 5rem;
+}
+.card {
+    width: 280px;
+    height: 365px;
+    background-color: #F4F5FA;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-photo {
+    height: 160px;
+    max-width: 90%;
+}
+.description-of-product {
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    max-height: 55px;
+}
+.price-of-product {
+    max-width: 100px;
+    max-height: 30px;
+    overflow: hidden;
+}
+.name-of-product {
+    max-width: 135px;
+    max-height: 30px;
+    overflow: hidden;
+}
+.buy-product-button {
+    background-color: rgb(24, 189, 79);
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    height: 30px;
+    width: 125px;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    background-image: url(img/banner.png);
+    background-position: center;
+    background-size: contain;
+    border-radius: 35px;
+    margin: auto;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+    color: white;
+}
+.banner__text {
+    font-size: 42px;
+    font-weight: 600;
+    width: 560px;
+}
+form {
+    position: relative;
+}
+.banner__input-email {
+    width: 500px;
+    height: 50px;
+    border-radius: 31px;
+    background-color: white;
+    text-align: left;
+    box-sizing: border-box;
+    padding: .5rem 2.5rem;
+    color: rgba(51, 51, 51, .6);
+}
+.banner__submit-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 26px;
+    color: white;
+    background-color: rgb(24, 189, 79);
+    position: relative;
+    left: -110px;
+}
+p {
+    margin: 0;
+}
+.display-f {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.green {
+    color: rgb(24, 189, 79);
+}
+.italic {
+    font-style: italic;
+}
+.mr {
+    margin-right: 10px;
+}
+.bold {
+    font-weight: 700;
+}
+.size-24 {
+    font-size: 24px;
+}
+.scroll {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+}
+.red {
+    background-color: #FF4C3B;
+    color: white;
+}
+.orange {
+    background-color: #FFB12B;
+    color: #333;
+}
+
+@media (max-width) {
+    
+}

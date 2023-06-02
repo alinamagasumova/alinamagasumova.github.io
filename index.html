@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans&family=Sofia+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="./script.js"></script> -->
+    <title>Рецепты</title>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="display-f">
+            <p class="header__logo">Еда в дом<span class="header__logo-dot">.</span></p>
+            <nav class="display-f">
+                <a href="./index.html" class="header__nav-a">Главная</a>
+                <a href="./catalog.html" class="header__nav-a">Каталог</a>
+                <a href="./new.html" class="header__nav-a">Новые продукты</a>
+                <a href="./about.html" class="header__nav-a">О нас</a>
+                <a href="./contact.html" class="header__nav-a">Контакты</a>
+            </nav>
+            <i class="fa-regular fa-user" style="font-size: 20px;"></i>
+        </header>
+
+        <p class="box__menu-p">Наше <span class="green italic">меню</span></p>
+        <div class="box__menu-sort-buttons display-f">
+            <div class="arrow-up display-f">
+                <p class="mr">По цене</p>
+                <i class="fa-regular fa-arrow-up-wide-short"></i>
+            </div>
+            <div class="arrow-down display-f">
+                <p class="mr">По цене</p>
+                <i class="fa-regular fa-arrow-up-short-wide"></i>
+            </div>
+            <p>Сначала новинки</p>
+        </div>
+        
+        <div class="catalog">
+            <div class="card">
+                <div  style="text-align: end; font-size: 20px;"><i class="fa-regular fa-heart"></i></div>
+                <img src="img/1.png" alt="tomato" class="product-photo">
+                <div class="name-and-price display-f">
+                    <p class="name-of-product size-24">Помидоры</p>
+                    <p class="price-of-product size-24"><span class="bold">80</span>₽/кг</p>
+                </div>
+                <p class="description-of-product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, consequuntur. Nisi, accusantium?</p>
+                <button class="buy-product-button">КУПИТЬ</button>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+              
+        <div class="banner">
+            <p class="banner__text">Присоединяйтесь к нам и получите <span class="green">скидку</span> до 50%</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi exercitationem quasi doloremque nam libero cumque alias consequuntur iusto maxime?</p>
+            <form action="">
+                <input class="banner__input-email" type="email" name="banner-email" id="banner-email" placeholder="Введите email" maxlength="20">
+                <button class="banner__submit-button" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const catalog = document.querySelector('.catalog');
+        window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById('header').classList.add('scroll');
+            } else {
+                document.getElementById('header').classList.remove('scroll');
+            }
+        };
+        console.log(data)
+        data.forEach((el, idx) => {
+        catalog.innerHTML += `<div class="card">
+                                    <div  style="text-align: end; font-size: 20px;"><i class="fa-regular fa-heart"></i></div>
+                                    <img src="img/${idx++}.png" alt="${el.name}" class="product-photo">
+                                    <div class="name-and-price display-f">
+                                        <p class="name-of-product size-24">${el.name}</p>
+                                        <p class="price-of-product size-24"><span class="bold">${el.price}</span>₽/кг</p>
+                                    </div>
+                                    <p class="description-of-product">${el.description}</p>
+                                    <button class="buy-product-button">КУПИТЬ</button>
+                            </div>`;
+        });
+    </script>
+</body>
+</html>
